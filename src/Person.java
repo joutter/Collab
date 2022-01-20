@@ -1,15 +1,42 @@
 public class Person {
-    String firstName;
-    String lastName;
-    int age;
+    private String firstName;
+    private String lastName;
+    private int age;
 
     public Person(String firstName, String lastName, int age) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
     }
-
     public void speak(){
-        System.out.println("Hello my name is " +this.firstName+ " " +this.lastName);
+        System.out.printf("Hello my name is %s %s", getFirstName(), getLastName());
+    }
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    @Override
+    public String toString(){
+        return String.format("%s %s %d", getFirstName(), getLastName(), getAge());
     }
 }

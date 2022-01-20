@@ -8,7 +8,9 @@ public class Person {
         this.lastName = lastName;
         this.age = age;
     }
-
+    public void speak(){
+        System.out.printf("Hello my name is %s %s", getFirstName(), getLastName());
+    }
     public String getFirstName() {
         return firstName;
     }
@@ -35,6 +37,6 @@ public class Person {
 
     @Override
     public String toString(){
-        return String.format("%s %s", getFirstName(), getLastName());
+        return String.format("%s %s %d", getFirstName(), getLastName(), getAge());
     }
 }
